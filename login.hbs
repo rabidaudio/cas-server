@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy CAS server</title>
+</head>
+<body>
+  <h1>Dummy CAS server</h1>
+  <p>This server is for debugging purposes only. It will authenticate any username/password combo.</p>
+  <p style="font-weight: bold">{{ message }}</p>
+  <form action="/login?service={{ service }}" method="POST">
+    Username:<br/>
+    <input type="text" name="username">
+    <br>
+    Password:<br>
+    <input type="password" name="password">
+    <br><br>
+    <input type="hidden" name="lt" value="{{ loginTicket }}">
+    <input type="hidden" name="service" value="{{ service }}">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

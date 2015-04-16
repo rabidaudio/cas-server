@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dummy Central Authentication Service</title>
+        <script>
+            var service = document.getElementById('redirect').getAttribute('xhref');
+            window.location.href=service;
+            mce_href=service;
+       </script>
+    </head>
+    <body>
+        <noscript>
+            <p>CAS login successful.</p>
+            <p>  Click <a id="redirect" xhref="{{ service }}"
+            mce_href="{{ service }}">here</a>
+            to access the service you requested.<br />  </p>
+        </noscript>
+    </body>
+ </html>
